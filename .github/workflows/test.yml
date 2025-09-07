@@ -11,5 +11,5 @@ jobs:
     - name: Git Clone
       uses: actions/checkout@v5
 
-    - name: Run ls command
-      run: ls
+    - name: Init
+      run: terraform init
