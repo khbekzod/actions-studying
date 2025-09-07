@@ -1,7 +1,9 @@
-name: Test 
+name: Terraform 
 on: 
   push:
     branches: [ "main" ]
+
+  workflow_dispatch:
 
 
 jobs: 
@@ -28,5 +30,5 @@ jobs:
         aws-region: us-east-2
 
     - name: Apply
-      run: terraform destroy -auto-approve
+      run: terraform apply -auto-approve
 
