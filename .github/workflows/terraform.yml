@@ -2,7 +2,8 @@ name: Terraform
 
 on: 
   workflow_dispatch:
-    inputs: 
+    inputs:
+
       action:
         description: "Plese select your choice"
         required: true
@@ -10,6 +11,23 @@ on:
         options: 
         - apply 
         - destroy
+
+      region:
+        description: "Please select your region"
+        required: true
+        type: choice
+        options:
+        - us-east-1
+        - us-east-2
+
+      ami_id:
+        description: "Please provide your AMI ID"
+        required: true
+        
+      instance_type:
+        description: "Please select your Instance Type"
+        required: true
+
 
 jobs: 
   deploy: 

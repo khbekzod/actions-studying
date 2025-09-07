@@ -1,5 +1,5 @@
 provider aws {
-    region = "us-east-2"
+    region = var.region
 }
 
 terraform {
@@ -11,6 +11,7 @@ terraform {
 }
 
 resource aws_instance web {
-    ami           = "ami-08ca1d1e465fbfe0c"
-    instance_type = "t2.micro"
+    ami           = var.ami_id
+    instance_type = var.ami_id
 }
+
