@@ -41,4 +41,5 @@ jobs:
           terraform apply -auto-approve
         else
           terraform destoy -auto-approve
+        fi
 
