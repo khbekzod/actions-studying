@@ -40,6 +40,6 @@ jobs:
         then
           terraform apply -auto-approve
         else
-          terraform destoy -auto-approve
+          terraform destroy -auto-approve
         fi
 
