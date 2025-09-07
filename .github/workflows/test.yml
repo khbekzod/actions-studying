@@ -8,7 +8,7 @@ jobs:
   deploy: 
     runs-on: ubuntu-latest
     steps: 
-    
+
     - name: Git Clone
       uses: actions/checkout@v5
 
@@ -19,3 +19,7 @@ jobs:
 
     - name: Init
       run: terraform init
+
+    - name: Apply
+      run: terraform apply -auto-approve
+      
